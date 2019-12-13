@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, './public')))
 app.use(express.static(path.join(__dirname, './images')))
 app.use(express.static(path.join(__dirname, './media')))
 app.use(express.static(path.join(__dirname, './weights')))
-app.use(express.static(path.join(__dirname, './dist')))
+app.use(express.static(path.join(__dirname, './face-api')))
 
 app.get('/', (req, res) => res.redirect('/face_detection'))
 app.get('/face_detection', (req, res) => res.sendFile(path.join(viewsDir, 'faceDetection.html')))
